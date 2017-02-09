@@ -1,0 +1,142 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic-ext,latin-ext,cyrillic);
+body {
+    background: #f5f5f5;
+}
+
+.app-wrapper {
+    width: 650px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.app-title {
+    text-align: center;
+    font-size: 55px;
+    color: #ff7a7a;
+    margin-bottom: 20px;
+}
+
+.content-adder input {
+    width: 610px;
+    height: 20px;
+    font-size: 25px;
+    color: #797979;
+    padding: 20px;
+    outline: none;
+    border: none;
+}
+
+.content-adder input::-webkit-input-placeholder {
+    color: #797979;
+}
+
+.content-adder input::-moz-placeholder {
+    color: #797979;
+}
+
+.content-adder input:-moz-placeholder {
+    color: #797979;
+}
+
+.content-adder input:-ms-input-placeholder {
+    color: #797979;
+}
+
+.list-wrapper ul {
+    list-style: none;
+    margin-top: 1px;
+    padding: 0;
+}
+
+.list-item {
+    padding: 5px 0px 5px 10px;
+    color: #797979;
+    background: #fff;
+    margin-bottom: 1px;
+}
+
+.list-item.done .list-item-text {
+    text-decoration: line-through;
+}
+
+.list-item.done .__to-success {
+    color: #a1fbeb;
+    border: 1px solid #a1fbeb;
+}
+
+.list-item .inside {
+    display: inline-block;
+    margin-right: 20px;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.list-item-state {
+    display: inline-block;
+    margin-right: 20px;
+    border: 1px solid #797979;
+    height: 26px;
+    border-radius: 26px;
+    width: 26px;
+    padding: 3px;
+    text-align: center;
+    line-height: 27px;
+    cursor: pointer;
+}
+
+.list-item-state.__to-success {
+    float: left;
+}
+
+.list-item-state.__to-delete {
+    float: right;
+}
+
+.list-item-state:hover {
+    color: #a1fbeb;
+    border: 1px solid #a1fbeb;
+}
+
+.list-item-text {
+    font-size: 20px;
+    padding: 5px;
+}
+
+.footer-wrapper {
+    margin-top: -13px;
+    padding: 14px;
+    background: #fff;
+    color: #797979;
+}
+
+.footer-item {
+    display: inline-block;
+}
+
+.footer-item.__filters .filter-item {
+    display: inline-block;
+}
+
+.footer-item.__filters .filter-item:not(:last-child) {
+    margin-right: 7px;
+}
+
+.footer-item.__actions .action-item {
+    display: inline-block;
+}
+
+.footer-item:nth-child(2) {
+    margin-left: 120px;
+}
+
+.footer-item:last-child {
+    float: right;
+}
+
+.footer-item a {
+    color: #797979;
+    text-decoration: none;
+}
+
+.footer-item a.__active {
+    text-decoration: underline;
+}
