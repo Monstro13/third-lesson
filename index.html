@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="thirdLesson">
 
 <head>
     <title></title>
@@ -8,20 +8,22 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
-<body>
+<body ng-controller="appController">
     <div class="container">
         <div class="app-wrapper">
-            <div class="app-title">Todo List</div>
+            <div class="app-title">Todo list</div>
             <div class="app-content">
                 <div class="content-wrapper">
                     <div class="content-adder">
-                        <input type="text" placeholder="What needs to be done?"></div>
+                        <form ng-submit="addTask()">
+                            <input ng-model="taskName" type="text" placeholder="What needs to be done?"></div>
+                    </form>
                     <div class="content-list">
                         <div class="list-wrapper">
                             <ul>
-                                <li class="list-item done">
-                                    <div class="list-item-state __to-success inside">✔</div>
-                                    <div class="list-item-text inside">Test</div>
+                                <li ng-repeat="todo in todos" class="list-item" ng-class="{'done': todo.done}">
+                                    <div ng-click="toggleTodo(todo)" class="list-item-state __to-success inside">✔</div>
+                                    <div class="list-item-text inside">{{todo.name}}</div>
                                     <div class="list-item-state __to-delete inside">×</div>
                                 </li>
                             </ul>
@@ -46,6 +48,10 @@
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js">
+    </script>
+    <script src="app.js">
+    </script>
 </body>
 
 </html>
